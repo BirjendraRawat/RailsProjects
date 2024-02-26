@@ -1,5 +1,5 @@
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240221-15760-a5cykk.rb extconf.rb
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240226-84976-c6vgv7.rb extconf.rb
 checking for unistd.h... yes
 checking for rb_io_descriptor()... no
 checking for linux/aio_abi.h... yes
@@ -12,10 +12,10 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
 make DESTDIR\= clean
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
 make DESTDIR\=
 compiling bytebuffer.c
 compiling monitor.c
@@ -45,6 +45,6 @@ selector.c:525:5: warning: ignoring return value of ‘write’ declared with at
       |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 linking shared-object nio4r_ext.so
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/nio4r-2.7.0/ext/nio4r
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20240221-15760-817iw1
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20240226-84976-o3mjez

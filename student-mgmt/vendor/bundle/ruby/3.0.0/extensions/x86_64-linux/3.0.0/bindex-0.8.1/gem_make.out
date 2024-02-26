@@ -1,15 +1,15 @@
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240221-15760-sdy0c3.rb extconf.rb
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240226-84976-ymm2x4.rb extconf.rb
 creating Makefile
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
 make DESTDIR\= clean
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
 make DESTDIR\=
 compiling cruby.c
 linking shared-object skiptrace/internal/cruby.so
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 cruby.so ./.gem.20240221-15760-i9jao5/skiptrace/internal
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20240226-84976-lotltn/skiptrace/internal

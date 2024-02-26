@@ -37,8 +37,8 @@ checked program was:
 /* end */
 
 "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.0.0 -I/usr/include/ruby-3.0.0/ruby/backward -I/usr/include/ruby-3.0.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=/build/ruby3.0-ohOwi0/ruby3.0-3.0.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby-3.0  -lm   -lc"
-/usr/bin/ld: /tmp/ccHZgAwP.o: in function `t':
-/home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_path'
+/usr/bin/ld: /tmp/ccxSd6VK.o: in function `t':
+/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_path'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -88,8 +88,8 @@ checked program was:
 /* end */
 
 "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.0.0 -I/usr/include/ruby-3.0.0/ruby/backward -I/usr/include/ruby-3.0.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=/build/ruby3.0-ohOwi0/ruby3.0-3.0.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby-3.0  -lm   -lc"
-/usr/bin/ld: /tmp/ccv8M9rp.o: in function `t':
-/home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_descriptor'
+/usr/bin/ld: /tmp/cccF2AS3.o: in function `t':
+/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_descriptor'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -189,8 +189,8 @@ checked program was:
 /* end */
 
 "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.0.0 -I/usr/include/ruby-3.0.0/ruby/backward -I/usr/include/ruby-3.0.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=/build/ruby3.0-ohOwi0/ruby3.0-3.0.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby-3.0  -lm   -lc"
-/usr/bin/ld: /tmp/ccO5T5Um.o: in function `t':
-/home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_closed_p'
+/usr/bin/ld: /tmp/ccshhfnL.o: in function `t':
+/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_closed_p'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -240,8 +240,8 @@ checked program was:
 /* end */
 
 "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.0.0 -I/usr/include/ruby-3.0.0/ruby/backward -I/usr/include/ruby-3.0.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=/build/ruby3.0-ohOwi0/ruby3.0-3.0.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby-3.0  -lm   -lc"
-/usr/bin/ld: /tmp/cc2Axfzz.o: in function `t':
-/home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_open_descriptor'
+/usr/bin/ld: /tmp/cc6BpUWO.o: in function `t':
+/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_io_open_descriptor'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */
@@ -380,8 +380,8 @@ checked program was:
 /* end */
 
 "x86_64-linux-gnu-gcc -o conftest -I/usr/include/x86_64-linux-gnu/ruby-3.0.0 -I/usr/include/ruby-3.0.0/ruby/backward -I/usr/include/ruby-3.0.0 -I. -Wdate-time -D_FORTIFY_SOURCE=2   -g -O2 -ffile-prefix-map=/build/ruby3.0-ohOwi0/ruby3.0-3.0.2=. -fstack-protector-strong -Wformat -Werror=format-security -fPIC conftest.c  -L. -L/usr/lib/x86_64-linux-gnu -L. -Wl,-Bsymbolic-functions -Wl,-z,relro -Wl,-z,now -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -lruby-3.0  -lm   -lc"
-/usr/bin/ld: /tmp/ccu3CfMZ.o: in function `t':
-/home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_scheduler_timeout'
+/usr/bin/ld: /tmp/cckaXamb.o: in function `t':
+/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/io-console-0.7.2/ext/io/console/conftest.c:15: undefined reference to `rb_scheduler_timeout'
 collect2: error: ld returned 1 exit status
 checked program was:
 /* begin */

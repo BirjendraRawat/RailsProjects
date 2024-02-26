@@ -1,5 +1,5 @@
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
-/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240221-15760-cmyskk.rb extconf.rb
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
+/usr/bin/ruby3.0 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20240226-84976-ub7a79.rb extconf.rb
 checking for BIO_read() in -llibcrypto... no
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
@@ -15,16 +15,16 @@ checking for SSL_get1_peer_certificate() in openssl/ssl.h... yes
 checking for Random.bytes... yes
 creating Makefile
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
 make DESTDIR\= clean
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
 make DESTDIR\=
 compiling http11_parser.c
 compiling mini_ssl.c
 compiling puma_http11.c
 linking shared-object puma/puma_http11.so
 
-current directory: /home/birjendra/Desktop/NewProject/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
+current directory: /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/student-mgmt/vendor/bundle/ruby/3.0.0/gems/puma-6.4.2/ext/puma_http11
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20240221-15760-mrsfnm/puma
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20240226-84976-no3s3x/puma
