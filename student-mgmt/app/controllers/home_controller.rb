@@ -1,5 +1,4 @@
 class HomeController < ApplicationController
-def vikas
-	@val=45
+def index
 end
 end
