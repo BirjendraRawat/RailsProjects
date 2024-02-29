@@ -446,3 +446,147 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 17415)
 
 
+Started GET "/static_pages/home" for 127.0.0.1 at 2024-02-29 10:43:00 +0530
+Started GET "/static_pages/contact" for 127.0.0.1 at 2024-02-29 10:43:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.2ms | Allocations: 313)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 261)
+  Rendered layout layouts/application.html.erb (Duration: 1647.8ms | Allocations: 67803)
+  Rendered layout layouts/application.html.erb (Duration: 1650.9ms | Allocations: 72933)
+Completed 200 OK in 2002ms (Views: 1757.2ms | ActiveRecord: 0.0ms | Allocations: 83385)
+
+
+Completed 200 OK in 2032ms (Views: 1758.8ms | ActiveRecord: 0.0ms | Allocations: 83638)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2024-02-29 10:43:08 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 184)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1818)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 2270)
+
+
+Started GET "/static_pages/about" for 127.0.0.1 at 2024-02-29 12:09:22 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.8ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 6804)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 8103)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000e740>
+Did you mean?  javascript_path
+               javascript_tag):
+     8: <%= stylesheet_link_tag 'application', media: 'all',
+     9: 'data-turbolinks-
+    10: track': 'reload' %>
+    11: <%= javascript_pack_tag 'application', 'data-turbolinks-
+    12: track': 'reload' %>
+    13:   </head>
+    14: 
+  
+app/views/layouts/application.html.erb:11
+Started GET "/static_pages/about" for 127.0.0.1 at 2024-02-29 12:10:42 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 5939)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 7211)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000012048>
+Did you mean?  javascript_path
+               javascript_tag):
+     6: <%= csrf_meta_tags %>
+     7: <%= csp_meta_tag %>
+     8: <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks- track': 'reload' %>
+     9: <%= javascript_pack_tag 'application', 'data-turbolinks- track': 'reload' %>
+    10:   </head>
+    11: 
+    12:   <body>
+  
+app/views/layouts/application.html.erb:9
+Started GET "/static_pages/about" for 127.0.0.1 at 2024-02-29 12:16:57 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 189)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1903)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 3203)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2024-02-29 12:17:57 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1325)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 1699)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 12:18:03 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1232)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 1533)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 12:21:40 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 143)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1856)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 3164)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2024-02-29 12:22:00 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 141)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1842)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 3142)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2024-02-29 12:22:02 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.1ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1352)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 1726)
+
+
+Started GET "/static_pages/help" for 127.0.0.1 at 2024-02-29 12:22:16 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.8ms | Allocations: 179)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1882)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3182)
+
+
+Started GET "/" for 127.0.0.1 at 2024-02-29 12:32:28 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 113)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1339)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1720)
+
+
