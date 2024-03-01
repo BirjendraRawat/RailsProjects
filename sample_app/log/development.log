@@ -590,3 +590,553 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1720)
 
 
+Started GET "/static_pages/help" for 127.0.0.1 at 2024-03-01 16:04:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.6ms | Allocations: 271)
+  Rendered layout layouts/application.html.erb (Duration: 153.8ms | Allocations: 28991)
+Completed 200 OK in 170ms (Views: 159.8ms | ActiveRecord: 0.0ms | Allocations: 35826)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:05:01 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1608)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms | Allocations: 2061)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:05:41 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 349)
+  Rendered layout layouts/application.html.erb (Duration: 84.8ms | Allocations: 23122)
+Completed 200 OK in 101ms (Views: 90.7ms | ActiveRecord: 0.0ms | Allocations: 29958)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:08:18 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.7ms | Allocations: 233)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2115)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3426)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:08:33 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2033)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2130)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 3448)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="center jumbotron">
+<h1>Welcome to the Sample App</h1>
+<h2>This is the home page for the
+<a href="https://www.railstutorial.org/">Ruby on Rails Tutorials</a>
+sample application.
+</h2>
+<%= link_to "Sign Up now!", '#', class: "btn btn-lg btn-primary" %>
+<%= link_to_image_tag("rails.svg", alt: "Rails logo", width: "200"),  "https://rubyonrails.org/" %>
+</div>
+):
+1:    <div class="center jumbotron">
+2:    <h1>Welcome to the Sample App</h1>
+3:    <h2>This is the home page for the
+4:    <a href="https://www.railstutorial.org/">Ruby on Rails Tutorials</a>
+5:    sample application.
+6:    </h2>
+7:    <%= link_to "Sign Up now!", '#', class: "btn btn-lg btn-primary" %>
+8:    <%= link_to_image_tag("rails.svg", alt: "Rails logo", width: "200"),  "https://rubyonrails.org/" %>
+9:    </div>
+  
+app/views/static_pages/home.html.erb:8: syntax error, unexpected ',', expecting ')'
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:09:08 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.0ms | Allocations: 965)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2594)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3900)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:12:16 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 935)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2559)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3859)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:23:04 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 105.3ms | Allocations: 22655)
+  Rendered layout layouts/application.html.erb (Duration: 126.1ms | Allocations: 24275)
+Completed 200 OK in 130ms (Views: 128.3ms | ActiveRecord: 0.0ms | Allocations: 25578)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:23:42 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1999)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3616)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 4922)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:44:30 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 12.5ms | Allocations: 1108)
+  Rendered layout layouts/application.html.erb (Duration: 122.0ms | Allocations: 14390)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 14692)
+
+
+  
+LoadError (cannot load such file -- sassc):
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:48:50 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1431.6ms | Allocations: 206375)
+  Rendered layout layouts/application.html.erb (Duration: 1454.3ms | Allocations: 214787)
+Completed 200 OK in 1469ms (Views: 1460.1ms | ActiveRecord: 0.0ms | Allocations: 221622)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:51:21 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 6853)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 8163)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:51:57 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.7ms | Allocations: 971)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 6845)
+Completed 200 OK in 55ms (Views: 43.6ms | ActiveRecord: 0.0ms | Allocations: 8150)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:53:49 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 961)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 6854)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 8157)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:55:40 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 959)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 6832)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.0ms | Allocations: 8136)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:56:06 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 959)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 6838)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 8145)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 16:56:08 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 618)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 6006)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 6324)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:04:04 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 618)
+  Rendered layout layouts/application.html.erb (Duration: 359.9ms | Allocations: 55276)
+Completed 200 OK in 361ms (Views: 360.8ms | ActiveRecord: 0.0ms | Allocations: 55577)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:12:40 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 620)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 6018)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 6319)
+
+
+Started GET "/static_pages/home" for 127.0.0.1 at 2024-03-01 17:12:52 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 618)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 6003)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 6304)
+
+
+Started GET "/static_pages/index" for 127.0.0.1 at 2024-03-01 17:12:59 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/static_pages/index"):
+  
+Started GET "/static_pages/help" for 127.0.0.1 at 2024-03-01 17:13:42 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.8ms | Allocations: 149)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 5941)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 6337)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:26:21 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 624)
+  Rendered layout layouts/application.html.erb (Duration: 538.9ms | Allocations: 56572)
+Completed 200 OK in 541ms (Views: 540.4ms | ActiveRecord: 0.0ms | Allocations: 56887)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:26:25 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 620)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 6017)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 6318)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:35:02 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 618)
+  Rendered layout layouts/application.html.erb (Duration: 402.5ms | Allocations: 56169)
+Completed 200 OK in 405ms (Views: 404.1ms | ActiveRecord: 0.0ms | Allocations: 56470)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:40:16 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 981)
+  Rendered layout layouts/application.html.erb (Duration: 341.5ms | Allocations: 57132)
+Completed 200 OK in 346ms (Views: 344.4ms | ActiveRecord: 0.0ms | Allocations: 58436)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:40:19 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 620)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 6012)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 6329)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 17:40:37 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.9ms | Allocations: 619)
+  Rendered layout layouts/application.html.erb (Duration: 571.4ms | Allocations: 55650)
+Completed 200 OK in 574ms (Views: 572.9ms | ActiveRecord: 0.0ms | Allocations: 55951)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:07:55 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.6ms | Allocations: 983)
+  Rendered layout layouts/application.html.erb (Duration: 486.7ms | Allocations: 58319)
+Completed 500 Internal Server Error in 491ms (ActiveRecord: 0.0ms | Allocations: 59606)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_shim with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/turbo-rails-2.0.4/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actiontext-7.1.3.2/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actionmailbox-7.1.3.2/app/views"
+
+Did you mean?  layouts/action_text/contents/content
+               action_text/attachables/missing_attachable
+               action_text/attachment_galleries/attachment_gallery
+               active_storage/blobs/blob
+               action_text/attachables/remote_image
+               action_text/contents/content):
+    12: src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    13: </script>
+    14: <![endif]-->
+    15:   <%= render 'layouts/shim' %>
+    16: </head>
+    17: 
+    18: <body>
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:12:50 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 978)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 9082)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 10355)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/turbo-rails-2.0.4/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actiontext-7.1.3.2/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actionmailbox-7.1.3.2/app/views"
+
+Did you mean?  layouts/shim
+               layouts/action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/remote_image
+               action_text/attachables/content_attachment
+               action_text/contents/content):
+    16: </head>
+    17: 
+    18: <body>
+    19:   <%= render 'layouts/header' %>
+    20:   <header class="navbar navbar-fixed-top navbar-inverse">
+    21:     <div class="container">
+    22:       <%= link_to "sample app", '#', id: "logo" %>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:14:18 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.1ms | Allocations: 978)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 8815)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 10087)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/turbo-rails-2.0.4/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actiontext-7.1.3.2/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actionmailbox-7.1.3.2/app/views"
+
+Did you mean?  layouts/shim
+               layouts/action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/remote_image
+               action_text/attachables/content_attachment
+               action_text/contents/content):
+    16: </head>
+    17: 
+    18: <body>
+    19:   <%= render 'layouts/header' %>
+    20:   <!--header class="navbar navbar-fixed-top navbar-inverse">
+    21:     <div class="container">
+    22:       <%#= link_to "sample app", '#', id: "logo" %>
+  
+app/views/layouts/application.html.erb:19
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:14:59 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.0ms | Allocations: 978)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 8798)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 10070)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_header with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/turbo-rails-2.0.4/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actiontext-7.1.3.2/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actionmailbox-7.1.3.2/app/views"
+
+Did you mean?  layouts/shim
+               layouts/action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/remote_image
+               action_text/attachables/content_attachment
+               action_text/contents/content):
+    11: </head>
+    12: 
+    13: <body>
+    14:   <%= render 'layouts/header' %>
+    15:   <!--header class="navbar navbar-fixed-top navbar-inverse">
+    16:     <div class="container">
+    17:       <%#= link_to "sample app", '#', id: "logo" %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:16:50 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.2ms | Allocations: 980)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 248)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 7332)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 8635)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:17:31 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 618)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered layout layouts/application.html.erb (Duration: 406.7ms | Allocations: 56450)
+Completed 200 OK in 408ms (Views: 407.5ms | ActiveRecord: 0.0ms | Allocations: 56767)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:27:12 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 975)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 121.9ms | Allocations: 25190)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 26462)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/turbo-rails-2.0.4/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actiontext-7.1.3.2/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actionmailbox-7.1.3.2/app/views"
+
+Did you mean?  layouts/header
+               layouts/action_text/contents/content
+               layouts/shim
+               action_text/contents/content
+               action_text/attachables/content_attachment
+               active_storage/blobs/blob):
+    14:   <%= render 'layouts/header' %>
+    15:   <div class="container">
+    16:     <%= yield %>
+    17:     <%= render 'layout/footer' %>
+    18:   </div>
+    19: </body>
+    20: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:29:09 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.2ms | Allocations: 980)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 9410)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms | Allocations: 10683)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/turbo-rails-2.0.4/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actiontext-7.1.3.2/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actionmailbox-7.1.3.2/app/views"
+
+Did you mean?  layouts/footer
+               layouts/header
+               layouts/action_text/contents/content
+               layouts/shim
+               action_text/contents/content
+               action_text/attachables/content_attachment):
+    14:   <%= render 'layouts/header' %>
+    15:   <div class="container">
+    16:     <%= yield %>
+    17:     <%= render 'layout/footer' %>
+    18:   </div>
+    19: </body>
+    20: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:29:51 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 980)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 9121)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 10396)
+
+
+  
+ActionView::Template::Error (Missing partial layout/_footer with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/turbo-rails-2.0.4/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actiontext-7.1.3.2/app/views"
+  * "/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/actionmailbox-7.1.3.2/app/views"
+
+Did you mean?  layouts/footer
+               layouts/header
+               layouts/action_text/contents/content
+               layouts/shim
+               action_text/contents/content
+               action_text/attachables/content_attachment):
+    14:   <%= render 'layouts/header' %>
+    15:   <div class="container">
+    16:     <%= yield %>
+    17:     <%= render 'layout/footer' %>
+    18:   </div>
+    19: </body>
+    20: </html>
+  
+app/views/layouts/application.html.erb:17
+Started GET "/" for 127.0.0.1 at 2024-03-01 18:30:05 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 980)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 246)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 191)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 7651)
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 8950)
+
+
