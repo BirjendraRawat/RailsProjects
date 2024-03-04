@@ -2159,3 +2159,89 @@ Processing by UsersController#new as HTML
 Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 8747)
 
 
+Started GET "/" for 127.0.0.1 at 2024-03-02 17:18:23 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1025)
+  Rendered layouts/_rails_default.html.erb (Duration: 12.4ms | Allocations: 5570)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 111)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 265)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 7968)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 9268)
+
+
+Started GET "/signup" for 127.0.0.1 at 2024-03-02 17:18:50 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 148)
+  Rendered layouts/_rails_default.html.erb (Duration: 40.4ms | Allocations: 5631)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 106)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 6254)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.0ms | Allocations: 6792)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-02 17:18:54 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.2ms | Allocations: 650)
+  Rendered layouts/_rails_default.html.erb (Duration: 46.3ms | Allocations: 5269)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 6350)
+Completed 200 OK in 66ms (Views: 63.8ms | ActiveRecord: 0.0ms | Allocations: 6651)
+
+
+Started GET "/signup" for 127.0.0.1 at 2024-03-02 17:44:36 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layouts/_rails_default.html.erb (Duration: 12.1ms | Allocations: 5446)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 5907)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6208)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 12:48:38 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 646)
+  Rendered layouts/_rails_default.html.erb (Duration: 14.3ms | Allocations: 5273)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 6349)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 6650)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-04 12:49:11 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 12.9ms | Allocations: 646)
+  Rendered layouts/_rails_default.html.erb (Duration: 33.6ms | Allocations: 5273)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 6349)
+Completed 200 OK in 54ms (Views: 50.1ms | ActiveRecord: 0.0ms | Allocations: 6650)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20240304104612)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (82.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240304104612') RETURNING "version"[0m
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
