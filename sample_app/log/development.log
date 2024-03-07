@@ -2245,3 +2245,1072 @@ Migrating to CreateUsers (20240304104612)
   [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240304104612') RETURNING "version"[0m
   [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-03-05 13:20:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240304104612_create_users.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20240304104612)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240304104612') RETURNING "version"[0m
+  [1m[36mTRANSACTION (71.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2024-03-05 13:24:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 423.3ms | Allocations: 72859)
+  Rendered layout layouts/application.html.erb (Duration: 424.8ms | Allocations: 73308)
+Completed 500 Internal Server Error in 438ms (ActiveRecord: 0.0ms | Allocations: 77166)
+
+
+  
+LoadError (Could not open library '/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so': /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so: cannot open shared object file: No such file or directory.
+Searched in <system library path>, /usr/lib, /usr/local/lib, /opt/local/lib):
+  
+ffi (1.16.3) lib/ffi/dynamic_library.rb:65:in `load_library'
+ffi (1.16.3) lib/ffi/library.rb:95:in `block in ffi_lib'
+ffi (1.16.3) lib/ffi/library.rb:94:in `map'
+ffi (1.16.3) lib/ffi/library.rb:94:in `ffi_lib'
+sassc (2.4.0) lib/sassc/native.rb:13:in `rescue in <module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:10:in `<module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:6:in `<module:SassC>'
+sassc (2.4.0) lib/sassc/native.rb:5:in `<main>'
+sassc (2.4.0) lib/sassc.rb:31:in `require_relative'
+sassc (2.4.0) lib/sassc.rb:31:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.1) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.1) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `block in resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `map'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:333:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each_with_index'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:20:49 +0530
+Processing by StaticPagesController#index as HTML
+Completed 406 Not Acceptable in 2ms (ActiveRecord: 0.0ms | Allocations: 865)
+
+
+  
+ActionController::MissingExactTemplate (StaticPagesController#index is missing a template for request formats: text/html):
+  
+actionpack (7.1.3.2) lib/action_controller/metal/implicit_render.rb:47:in `default_render'
+actionpack (7.1.3.2) lib/action_controller/metal/basic_implicit_render.rb:7:in `send_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:224:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rendering.rb:165:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+turbo-rails (2.0.4) lib/turbo-rails.rb:24:in `with_request_id'
+turbo-rails (2.0.4) app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+actiontext (7.1.3.2) lib/action_text/rendering.rb:23:in `with_renderer'
+actiontext (7.1.3.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `instance_exec'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:141:in `run_callbacks'
+actionpack (7.1.3.2) lib/abstract_controller/callbacks.rb:258:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/rescue.rb:25:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.1.3.2) lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+activesupport (7.1.3.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.1.3.2) lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+actionpack (7.1.3.2) lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+activerecord (7.1.3.2) lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+actionpack (7.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionview (7.1.3.2) lib/action_view/rendering.rb:40:in `process'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:227:in `dispatch'
+actionpack (7.1.3.2) lib/action_controller/metal.rb:309:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:51:in `block in serve'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `each'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:124:in `find_routes'
+actionpack (7.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.1.3.2) lib/action_dispatch/routing/route_set.rb:882:in `call'
+rack (3.0.9.1) lib/rack/tempfile_reaper.rb:20:in `call'
+rack (3.0.9.1) lib/rack/etag.rb:29:in `call'
+rack (3.0.9.1) lib/rack/conditional_get.rb:31:in `call'
+rack (3.0.9.1) lib/rack/head.rb:15:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/http/content_security_policy.rb:33:in `call'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:272:in `context'
+rack-session (2.0.0) lib/rack/session/abstract/id.rb:266:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:655:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.9.1) lib/rack/method_override.rb:28:in `call'
+rack (3.0.9.1) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.9.1) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:21:52 +0530
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 122)
+  Rendered layouts/_rails_default.html.erb (Duration: 34.9ms | Allocations: 8639)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 9577)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms | Allocations: 11283)
+
+
+  
+LoadError (Could not open library '/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so': /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so: cannot open shared object file: No such file or directory.
+Searched in <system library path>, /usr/lib, /usr/local/lib, /opt/local/lib):
+  
+app/views/layouts/_rails_default.html.erb:3
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:22:45 +0530
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_rails_default.html.erb (Duration: 27.0ms | Allocations: 16220)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 16714)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 17448)
+
+
+  
+LoadError (Could not open library '/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so': /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so: cannot open shared object file: No such file or directory.
+Searched in <system library path>, /usr/lib, /usr/local/lib, /opt/local/lib):
+  
+app/views/layouts/_rails_default.html.erb:3
+app/views/layouts/application.html.erb:6
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:23:54 +0530
+Processing by StaticPagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 121)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.6ms | Allocations: 595)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 112)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 326)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2166)
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 3500)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 11:51:41 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 24.8ms | Allocations: 12574)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 14210)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 16292)
+
+
+  
+LoadError (Could not open library '/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so': /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so: cannot open shared object file: No such file or directory.
+Searched in <system library path>, /usr/lib, /usr/local/lib, /opt/local/lib):
+  
+ffi (1.16.3) lib/ffi/dynamic_library.rb:65:in `load_library'
+ffi (1.16.3) lib/ffi/library.rb:95:in `block in ffi_lib'
+ffi (1.16.3) lib/ffi/library.rb:94:in `map'
+ffi (1.16.3) lib/ffi/library.rb:94:in `ffi_lib'
+sassc (2.4.0) lib/sassc/native.rb:13:in `rescue in <module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:10:in `<module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:6:in `<module:SassC>'
+sassc (2.4.0) lib/sassc/native.rb:5:in `<main>'
+sassc (2.4.0) lib/sassc.rb:31:in `require_relative'
+sassc (2.4.0) lib/sassc.rb:31:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.1) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.1) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `block in resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `map'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:333:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each_with_index'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:23:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 105.9ms | Allocations: 33021)
+  Rendered layout layouts/application.html.erb (Duration: 107.0ms | Allocations: 33560)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms | Allocations: 40664)
+
+
+  
+LoadError (Could not open library '/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so': /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so: cannot open shared object file: No such file or directory.
+Searched in <system library path>, /usr/lib, /usr/local/lib, /opt/local/lib):
+  
+ffi (1.16.3) lib/ffi/dynamic_library.rb:65:in `load_library'
+ffi (1.16.3) lib/ffi/library.rb:95:in `block in ffi_lib'
+ffi (1.16.3) lib/ffi/library.rb:94:in `map'
+ffi (1.16.3) lib/ffi/library.rb:94:in `ffi_lib'
+sassc (2.4.0) lib/sassc/native.rb:13:in `rescue in <module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:10:in `<module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:6:in `<module:SassC>'
+sassc (2.4.0) lib/sassc/native.rb:5:in `<main>'
+sassc (2.4.0) lib/sassc.rb:31:in `require_relative'
+sassc (2.4.0) lib/sassc.rb:31:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.1) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.1) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `block in resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `map'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:333:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each_with_index'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:29:28 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 106.1ms | Allocations: 33257)
+  Rendered layout layouts/application.html.erb (Duration: 106.7ms | Allocations: 33727)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms | Allocations: 40792)
+
+
+  
+LoadError (Could not open library '/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so': /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so: cannot open shared object file: No such file or directory.
+Searched in <system library path>, /usr/lib, /usr/local/lib, /opt/local/lib):
+  
+ffi (1.16.3) lib/ffi/dynamic_library.rb:65:in `load_library'
+ffi (1.16.3) lib/ffi/library.rb:95:in `block in ffi_lib'
+ffi (1.16.3) lib/ffi/library.rb:94:in `map'
+ffi (1.16.3) lib/ffi/library.rb:94:in `ffi_lib'
+sassc (2.4.0) lib/sassc/native.rb:13:in `rescue in <module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:10:in `<module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:6:in `<module:SassC>'
+sassc (2.4.0) lib/sassc/native.rb:5:in `<main>'
+sassc (2.4.0) lib/sassc.rb:31:in `require_relative'
+sassc (2.4.0) lib/sassc.rb:31:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.1) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.1) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `block in resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `map'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:333:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each_with_index'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:38:00 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 659.3ms | Allocations: 95204)
+  Rendered layouts/_rails_default.html.erb (Duration: 16.8ms | Allocations: 2855)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 148)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 682.3ms | Allocations: 99637)
+Completed 200 OK in 699ms (Views: 688.4ms | ActiveRecord: 0.0ms | Allocations: 106460)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:41:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 115.6ms | Allocations: 28267)
+  Rendered layouts/_rails_default.html.erb (Duration: 16.7ms | Allocations: 2855)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 148)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 140.4ms | Allocations: 32700)
+Completed 200 OK in 160ms (Views: 149.1ms | ActiveRecord: 0.0ms | Allocations: 39524)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:41:10 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.7ms | Allocations: 769)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 409)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1617)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1984)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:41:21 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.6ms | Allocations: 642)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.7ms | Allocations: 321)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1393)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 1700)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:45:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 96.5ms | Allocations: 32467)
+  Rendered layout layouts/application.html.erb (Duration: 97.3ms | Allocations: 32937)
+Completed 500 Internal Server Error in 118ms (ActiveRecord: 0.0ms | Allocations: 40002)
+
+
+  
+LoadError (Could not open library '/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so': /home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/vendor/bundle/ruby/3.0.0/gems/sassc-2.4.0/ext/libsass.so: cannot open shared object file: No such file or directory.
+Searched in <system library path>, /usr/lib, /usr/local/lib, /opt/local/lib):
+  
+ffi (1.16.3) lib/ffi/dynamic_library.rb:65:in `load_library'
+ffi (1.16.3) lib/ffi/library.rb:95:in `block in ffi_lib'
+ffi (1.16.3) lib/ffi/library.rb:94:in `map'
+ffi (1.16.3) lib/ffi/library.rb:94:in `ffi_lib'
+sassc (2.4.0) lib/sassc/native.rb:13:in `rescue in <module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:10:in `<module:Native>'
+sassc (2.4.0) lib/sassc/native.rb:6:in `<module:SassC>'
+sassc (2.4.0) lib/sassc/native.rb:5:in `<main>'
+sassc (2.4.0) lib/sassc.rb:31:in `require_relative'
+sassc (2.4.0) lib/sassc.rb:31:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/autoload/sassc.rb:2:in `<main>'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+bootsnap (1.18.3) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:30:in `require'
+zeitwerk (2.6.13) lib/zeitwerk/kernel.rb:34:in `require'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:42:in `initialize'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `new'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:27:in `instance'
+sprockets (4.2.1) lib/sprockets/sassc_processor.rb:35:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:37:in `cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:102:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `block in processor_cache_key'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:49:in `processor_cache_key'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `block in processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `map'
+sprockets (4.2.1) lib/sprockets/processor_utils.rb:111:in `processors_cache_keys'
+sprockets (4.2.1) lib/sprockets/processing.rb:165:in `resolve_processors_cache_key_uri'
+sprockets (4.2.1) lib/sprockets.rb:216:in `block in <module:Sprockets>'
+sprockets (4.2.1) lib/sprockets/dependencies.rb:68:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `block in resolve_dependency'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:54:in `resolve_dependency'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `block in resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `map'
+sprockets (4.2.1) lib/sprockets/loader.rb:290:in `resolve_dependencies'
+sprockets (4.2.1) lib/sprockets/loader.rb:54:in `block in load'
+sprockets (4.2.1) lib/sprockets/loader.rb:333:in `block in fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `each_with_index'
+sprockets (4.2.1) lib/sprockets/loader.rb:329:in `fetch_asset_from_dependency_cache'
+sprockets (4.2.1) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `block in load'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:207:in `block in fetch_or_store'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:187:in `fetch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/map.rb:206:in `fetch_or_store'
+sprockets (4.2.1) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.2.1) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.2.1) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.2.1) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `block in synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:48:in `synchronize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:359:in `run_task'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:350:in `block (3 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `loop'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:341:in `block (2 levels) in create_worker'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `catch'
+concurrent-ruby (1.2.3) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:340:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2024-03-07 12:48:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 114.5ms | Allocations: 28189)
+  Rendered layouts/_rails_default.html.erb (Duration: 12.0ms | Allocations: 2863)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 148)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 133.0ms | Allocations: 32630)
+Completed 200 OK in 152ms (Views: 141.8ms | ActiveRecord: 0.0ms | Allocations: 39454)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:01:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 106.0ms | Allocations: 28231)
+  Rendered layouts/_rails_default.html.erb (Duration: 14.7ms | Allocations: 2875)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 148)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 126.6ms | Allocations: 32684)
+Completed 200 OK in 142ms (Views: 131.6ms | ActiveRecord: 0.0ms | Allocations: 39508)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:05:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 977.0ms | Allocations: 127198)
+  Rendered layouts/_rails_default.html.erb (Duration: 31.3ms | Allocations: 2863)
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 148)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 1017.9ms | Allocations: 131727)
+Completed 200 OK in 1042ms (Views: 1027.4ms | ActiveRecord: 0.0ms | Allocations: 138550)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:05:22 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.9ms | Allocations: 772)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.0ms | Allocations: 399)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1610)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 1979)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:06:03 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 642)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.9ms | Allocations: 325)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 1411)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 1718)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:07:02 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.0ms | Allocations: 642)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.3ms | Allocations: 323)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1395)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms | Allocations: 1696)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:08:25 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 642)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 313)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1385)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 1692)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:09:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 683.7ms | Allocations: 128206)
+  Rendered layouts/_rails_default.html.erb (Duration: 11.1ms | Allocations: 2863)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 148)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 700.1ms | Allocations: 132735)
+Completed 200 OK in 717ms (Views: 705.7ms | ActiveRecord: 0.0ms | Allocations: 139558)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:12:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 163.1ms | Allocations: 52218)
+  Rendered layouts/_rails_default.html.erb (Duration: 25.2ms | Allocations: 7987)
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 148)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 286)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 197.8ms | Allocations: 61867)
+Completed 200 OK in 219ms (Views: 204.4ms | ActiveRecord: 0.0ms | Allocations: 68688)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:12:28 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 8.2ms | Allocations: 687)
+  Rendered layouts/_rails_default.html.erb (Duration: 22.7ms | Allocations: 5350)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 6476)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 6842)
+
+
+Started GET "/help" for 127.0.0.1 at 2024-03-07 13:12:32 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.7ms | Allocations: 171)
+  Rendered layouts/_rails_default.html.erb (Duration: 12.8ms | Allocations: 5436)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 6060)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms | Allocations: 6449)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 13:12:36 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 2.9ms | Allocations: 156)
+  Rendered layouts/_rails_default.html.erb (Duration: 74.0ms | Allocations: 5523)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 81.9ms | Allocations: 6130)
+Completed 200 OK in 88ms (Views: 84.5ms | ActiveRecord: 0.0ms | Allocations: 6497)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-03-07 13:12:38 +0530
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.0ms | Allocations: 131)
+  Rendered layouts/_rails_default.html.erb (Duration: 12.4ms | Allocations: 5448)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 6030)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 6396)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 13:12:49 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layouts/_rails_default.html.erb (Duration: 19.2ms | Allocations: 5428)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 5889)
+Completed 200 OK in 24ms (Views: 23.6ms | ActiveRecord: 0.0ms | Allocations: 6190)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 13:59:35 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.4ms | Allocations: 647)
+  Rendered layouts/_rails_default.html.erb (Duration: 14.7ms | Allocations: 5275)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 6352)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 6653)
+
+
+Started GET "/help" for 127.0.0.1 at 2024-03-07 13:59:58 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.3ms | Allocations: 10)
+  Rendered layouts/_rails_default.html.erb (Duration: 24.4ms | Allocations: 5442)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 5903)
+Completed 200 OK in 34ms (Views: 31.9ms | ActiveRecord: 0.0ms | Allocations: 6204)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 14:00:14 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 7.7ms | Allocations: 644)
+  Rendered layouts/_rails_default.html.erb (Duration: 31.5ms | Allocations: 5338)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 6412)
+Completed 200 OK in 47ms (Views: 45.3ms | ActiveRecord: 0.0ms | Allocations: 6713)
+
+
+Started GET "/help" for 127.0.0.1 at 2024-03-07 14:00:16 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.2ms | Allocations: 10)
+  Rendered layouts/_rails_default.html.erb (Duration: 26.5ms | Allocations: 5456)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 5917)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 6218)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 14:52:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4312.2ms | Allocations: 52170)
+  Rendered layouts/_rails_default.html.erb (Duration: 101.7ms | Allocations: 5587)
+  Rendered layouts/_shim.html.erb (Duration: 1.5ms | Allocations: 112)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 281)
+  Rendered layouts/_footer.html.erb (Duration: 2.5ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 4515.1ms | Allocations: 59329)
+Completed 200 OK in 4897ms (Views: 4662.9ms | ActiveRecord: 0.0ms | Allocations: 66150)
+
+
+Started GET "/help" for 127.0.0.1 at 2024-03-07 14:52:36 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 1.9ms | Allocations: 176)
+  Rendered layouts/_rails_default.html.erb (Duration: 220.2ms | Allocations: 15343)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 107)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 227.6ms | Allocations: 16025)
+Completed 200 OK in 264ms (Views: 229.8ms | ActiveRecord: 0.0ms | Allocations: 16490)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 14:52:44 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 1.0ms | Allocations: 192)
+  Rendered layouts/_rails_default.html.erb (Duration: 15.3ms | Allocations: 5408)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 6053)
+Completed 200 OK in 36ms (Views: 19.7ms | ActiveRecord: 0.0ms | Allocations: 6474)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-03-07 14:52:46 +0530
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 3.2ms | Allocations: 131)
+  Rendered layouts/_rails_default.html.erb (Duration: 34.8ms | Allocations: 5587)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 6169)
+Completed 200 OK in 82ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 6537)
+
+
+Started GET "/about" for 127.0.0.1 at 2024-03-07 14:52:50 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layouts/_rails_default.html.erb (Duration: 11.4ms | Allocations: 5366)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 5827)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 6129)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 14:52:52 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.4ms | Allocations: 651)
+  Rendered layouts/_rails_default.html.erb (Duration: 17.1ms | Allocations: 5303)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 6385)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 6692)
+
+
+Started GET "/help" for 127.0.0.1 at 2024-03-07 14:52:55 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.1ms | Allocations: 10)
+  Rendered layouts/_rails_default.html.erb (Duration: 14.5ms | Allocations: 5366)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 5827)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 6128)
+
+
+Started GET "/contact" for 127.0.0.1 at 2024-03-07 14:52:58 +0530
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.2ms | Allocations: 10)
+  Rendered layouts/_rails_default.html.erb (Duration: 37.7ms | Allocations: 5362)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 89)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 5823)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.0ms | Allocations: 6124)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-07 14:53:00 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.4ms | Allocations: 644)
+  Rendered layouts/_rails_default.html.erb (Duration: 22.5ms | Allocations: 5291)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 71)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 6365)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 6666)
+
+
+Started GET "/signup" for 127.0.0.1 at 2024-03-07 14:53:05 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 149)
+  Rendered layouts/_rails_default.html.erb (Duration: 16.3ms | Allocations: 5560)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 6184)
+Completed 200 OK in 35ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 6725)
+
+
