@@ -5696,3 +5696,257 @@ Processing by StaticPagesController#about as HTML
   Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1036)
 Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1353)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "schema_sha1"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (9.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ApplicationHelperTest: test_full_title_helper
+---------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_help
+-----------------------------------------------
+Started GET "/help" for 127.0.0.1 at 2024-03-11 18:08:41 +0530
+Processing by StaticPagesController#help as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/help.html.erb within layouts/application
+  Rendered static_pages/help.html.erb within layouts/application (Duration: 0.7ms | Allocations: 289)
+  Rendered layouts/_rails_default.html.erb (Duration: 9129.5ms | Allocations: 183349)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 160)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 383)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 9136.0ms | Allocations: 185307)
+Completed 200 OK in 9153ms (Views: 9139.9ms | ActiveRecord: 0.0ms | Allocations: 191076)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Started GET "/contact" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.6ms | Allocations: 189)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 486)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 108)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1138)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 1537)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.3ms | Allocations: 511)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.5ms | Allocations: 414)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1349)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1665)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+StaticPagesControllerTest: test_should_get_about
+------------------------------------------------
+Started GET "/about" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by StaticPagesController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/about.html.erb within layouts/application
+  Rendered static_pages/about.html.erb within layouts/application (Duration: 0.6ms | Allocations: 179)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 418)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1036)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 1353)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------
+SiteLayoutTest: test_layout_links
+---------------------------------
+Started GET "/" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.1ms | Allocations: 312)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.5ms | Allocations: 414)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1149)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 1408)
+Started GET "/contact" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by StaticPagesController#contact as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 418)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 95)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 861)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 1120)
+Started GET "/signup" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 249)
+  Rendered users/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 3154)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.7ms | Allocations: 481)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 56)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4085)
+Completed 200 OK in 286ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 90964)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+UsersSignupTest: test_invalid_signup_information
+------------------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 852)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 415)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1699)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 2015)
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+Started POST "/users" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"", "email"=>"user@invalid", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@invalid"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 2.8ms | Allocations: 1581)
+  Rendered users/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4350)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 503)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 96)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5295)
+Completed 200 OK in 18ms (Views: 10.1ms | ActiveRecord: 0.6ms | Allocations: 8025)
+  [1m[36mUser Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------
+UserTest: test_should_be_valid
+------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+UserTest: test_email_validation_should_reject_invalid_addresses
+---------------------------------------------------------------
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example,com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user_foo.org"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user.name@example."], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar_baz.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "foo@bar+baz.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_be_present_(nonblank)
+----------------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------
+UserTest: test_name_should_be_present
+-------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------
+UserTest: test_email_should_be_present
+--------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", " "], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+UserTest: test_email_should_not_be_too_long
+-------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+UserTest: test_name_should_not_be_too_long
+------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+UserTest: test_email_validation_should_accept_valid_addresses
+-------------------------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "USER@foo.COM"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "A_US-ER@foo.oRg"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "first.last@foo.jp"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "alice+bob@baz.cn"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+UserTest: test_email_addresses_should_be_unique
+-----------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Example user"], ["email", "user@example.com"], ["created_at", "2024-03-11 12:38:51.450314"], ["updated_at", "2024-03-11 12:38:51.450314"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------
+UserTest: test_email_address_should_be_saves_as_lowercase
+---------------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "Foo@ExaMple.cOm"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?) RETURNING "id"[0m  [["name", "Example user"], ["email", "foo@example.com"], ["created_at", "2024-03-11 12:38:51.457700"], ["updated_at", "2024-03-11 12:38:51.457700"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+UserTest: test_password_should_have_a_minimum_length
+----------------------------------------------------
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UsersControllerTest: test_should_get_new
+----------------------------------------
+Started GET "/signup" for 127.0.0.1 at 2024-03-11 18:08:51 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 796)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.5ms | Allocations: 418)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 55)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 1644)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1923)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
