@@ -11,9 +11,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       assert_template 'users/new'
       assert_select 'div#error_explanation'
       assert_select 'div.field_with_errors'
-<<<<<<< HEAD
-    end
-=======
   end
 
   test "valid signup information" do
@@ -28,6 +25,5 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
         # refute flash.empty?
         # refute_empty flash
   end
->>>>>>> sign-up
 
 end
