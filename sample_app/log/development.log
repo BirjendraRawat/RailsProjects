@@ -14136,3 +14136,19 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 48ms (Views: 31.1ms | ActiveRecord: 0.3ms | Allocations: 4318)
 
 
+Started GET "/" for 127.0.0.1 at 2024-03-19 18:12:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2.2ms | Allocations: 621)
+  Rendered layouts/_rails_default.html.erb (Duration: 53.7ms | Allocations: 3015)
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 148)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:11:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 110.1ms | Allocations: 102755)
+  Rendered layouts/_footer.html.erb (Duration: 3.3ms | Allocations: 240)
+  Rendered layout layouts/application.html.erb (Duration: 207.5ms | Allocations: 108363)
+Completed 200 OK in 459ms (Views: 257.6ms | ActiveRecord: 4.5ms | Allocations: 115191)
+
+
