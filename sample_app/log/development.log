@@ -14152,3 +14152,833 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 459ms (Views: 257.6ms | ActiveRecord: 4.5ms | Allocations: 115191)
 
 
+Started GET "/" for 127.0.0.1 at 2024-03-27 15:26:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 4.6ms | Allocations: 621)
+  Rendered layouts/_rails_default.html.erb (Duration: 18.1ms | Allocations: 695)
+  Rendered layouts/_shim.html.erb (Duration: 2.0ms | Allocations: 112)
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 501)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 128.9ms | Allocations: 3746)
+Completed 200 OK in 924ms (Views: 320.8ms | ActiveRecord: 0.0ms | Allocations: 10572)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddRememberDigestToUsers (20240327095811)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (16.4ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240327095811') RETURNING "version"[0m
+  [1m[36mTRANSACTION (22.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-27 15:55:36 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 224.6ms | Allocations: 4478)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.2ms | Allocations: 439)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 111)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 479)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 233.1ms | Allocations: 7229)
+Completed 200 OK in 257ms (Views: 236.8ms | ActiveRecord: 0.0ms | Allocations: 8541)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-03-27 10:26:30.916877"], ["remember_digest", "$2a$12$7bAf76uDr9xpW3yguMtVVuP.hrW/ei2KFLemmH2fotv5CWpeC9WUS"], ["id", 1]]
+  [1m[36mTRANSACTION (28.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/login" for 127.0.0.1 at 2024-03-27 16:55:20 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1114)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.0ms | Allocations: 434)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 111)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 486)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3792)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 5105)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 16:55:28 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1457)
+
+
+  
+SyntaxError (/home/birjendra/Desktop/NewProject/RubyLearning/RailsProjects/sample_app/app/models/user.rb:50: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/models/user.rb:50: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/sessions_controller.rb:7:in `create'
+Started POST "/login" for 127.0.0.1 at 2024-03-27 16:57:49 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mUser Update (2.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-03-27 11:27:50.705050"], ["remember_digest", "$2a$12$V1vIeTzikDUSgYsYayL5ZeQOkaXCaDhodVJ7Ij2Rpb1jgc9vtRGK2"], ["id", 1]]
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 946ms (ActiveRecord: 6.2ms | Allocations: 117757)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 16:57:50 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 355)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.0ms | Allocations: 737)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 111)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.2ms | Allocations: 1235)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4141)
+Completed 200 OK in 42ms (Views: 24.0ms | ActiveRecord: 0.3ms | Allocations: 6711)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 16:59:17 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 241)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 109)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1289)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 2144)
+
+
+Started GET "/" for 127.0.0.1 at 2024-03-27 17:03:10 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 346)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 413)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1694)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2245)
+
+
+Started GET "/signup" for 127.0.0.1 at 2024-03-27 17:03:13 +0530
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 233)
+  Rendered users/new.html.erb within layouts/application (Duration: 27.3ms | Allocations: 1975)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 3108)
+Completed 200 OK in 93ms (Views: 34.5ms | ActiveRecord: 0.0ms | Allocations: 3523)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:03:17 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 875)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.5ms | Allocations: 153)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 2.0ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2010)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 2445)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:03:19 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mUser Update (3.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-03-27 11:33:20.706137"], ["remember_digest", "$2a$12$bKsZ23WiU.EJornZlIkwgOhocXM9ALfDRjCnBPUntcHw.08/h3tL."], ["id", 1]]
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 855ms (ActiveRecord: 4.3ms | Allocations: 3253)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:03:20 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 41)
+  Rendered layouts/_rails_default.html.erb (Duration: 2.4ms | Allocations: 366)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 704)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2007)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 2806)
+
+
+Started GET "/logout" for 127.0.0.1 at 2024-03-27 17:03:33 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+Started GET "/" for 127.0.0.1 at 2024-03-27 17:03:41 +0530
+Processing by StaticPagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 138)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 369)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 776)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2187)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 2538)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:03:49 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 366)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2001)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.2ms | Allocations: 2800)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:04:36 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 281)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.8ms | Allocations: 733)
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 111)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 1235)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 3972)
+Completed 200 OK in 37ms (Views: 16.8ms | ActiveRecord: 3.2ms | Allocations: 11618)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:25:38 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 281)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.5ms | Allocations: 717)
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 111)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.3ms | Allocations: 1235)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 204)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3956)
+Completed 200 OK in 32ms (Views: 14.7ms | ActiveRecord: 2.8ms | Allocations: 11162)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:25:45 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 180.9ms | Allocations: 1861)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.6ms | Allocations: 185)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 775)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 190.8ms | Allocations: 3757)
+Completed 200 OK in 194ms (Views: 192.2ms | ActiveRecord: 0.2ms | Allocations: 4310)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:26:37 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 745)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.7ms | Allocations: 153)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 678)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2471)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 2813)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:28:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 5404)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.8ms | Allocations: 518)
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 112)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 128.3ms | Allocations: 115088)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 240)
+  Rendered layout layouts/application.html.erb (Duration: 156.2ms | Allocations: 122983)
+Completed 200 OK in 172ms (Views: 158.6ms | ActiveRecord: 3.1ms | Allocations: 129811)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:29:28 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 877)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.7ms | Allocations: 181)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 777)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 2745)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 3118)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:37:31 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"vikas@abc.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vikas@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 574)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.9ms | Allocations: 172)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 728)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 2377)
+Completed 200 OK in 20ms (Views: 9.9ms | ActiveRecord: 7.4ms | Allocations: 4208)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:37:45 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"vikas@abc.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vikas@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2236)
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 3292)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:38:00 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"vikas@abc.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vikas@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2235)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.2ms | Allocations: 3277)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2024-03-27 17:38:07 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 353)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.0ms | Allocations: 477)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 798)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2505)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 3654)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2024-03-27 17:38:12 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 41)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.9ms | Allocations: 376)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2009)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 2847)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2024-03-27 17:38:15 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1026)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=4):
+  
+app/controllers/users_controller.rb:4:in `show'
+Started GET "/users/3" for 127.0.0.1 at 2024-03-27 17:38:18 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.1ms | Allocations: 466)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 727)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2162)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.6ms | Allocations: 3065)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:38:21 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.3ms | Allocations: 384)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 699)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2020)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 2837)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2024-03-27 17:38:26 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 39)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 378)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2008)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 2803)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:38:50 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 781)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 153)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 678)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2513)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.1ms | Allocations: 2827)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:39:00 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"pammi@abc.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pammi@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.5ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 2235)
+Completed 200 OK in 425ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 3361)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:39:20 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"pammi@abc.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pammi@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.5ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2235)
+Completed 200 OK in 428ms (Views: 7.4ms | ActiveRecord: 0.3ms | Allocations: 3312)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:39:33 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"pammi@abc.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pammi@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2235)
+Completed 200 OK in 460ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 3311)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:39:46 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"pammi@abc.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pammi@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.6ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 2235)
+Completed 200 OK in 459ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 3310)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:41:24 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"bijji@abc.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bijji@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2235)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 3277)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:41:32 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.3ms | Allocations: 376)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2007)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 2803)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2024-03-27 17:41:34 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.7ms | Allocations: 368)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 1998)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.3ms | Allocations: 2793)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:41:44 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 723)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.8ms | Allocations: 153)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.0ms | Allocations: 678)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 2448)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms | Allocations: 2755)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:42:15 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"pramila@abc.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pramila@abc.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 495)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.4ms | Allocations: 149)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 677)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2235)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.2ms | Allocations: 3291)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:42:34 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-03-27 12:12:35.152879"], ["remember_digest", "$2a$12$VPNah9Lwmjiv1GWqCRBTpuShzKl9H9ea0xdlvBCilI605RFpyTI.i"], ["id", 1]]
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mTRANSACTION (47.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 895ms (ActiveRecord: 49.7ms | Allocations: 4455)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:42:35 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.1ms | Allocations: 376)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.1ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 2005)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 2801)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:43:09 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.7ms | Allocations: 372)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2003)
+Completed 200 OK in 13ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 2799)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:47:37 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.3ms | Allocations: 380)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2011)
+Completed 200 OK in 13ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 2807)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:47:45 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 721)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.9ms | Allocations: 153)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 9.3ms | Allocations: 678)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 2446)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.3ms | Allocations: 2753)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:50:00 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 706)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.9ms | Allocations: 153)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 7.7ms | Allocations: 679)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 2432)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.1ms | Allocations: 2739)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:51:09 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mUser Update (4.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-03-27 12:21:10.631295"], ["remember_digest", "$2a$12$4egIG1qvfTDk1bM3obe7jOLe8Rs5Q3UssdGlle6Bu/2nB10QIlBMy"], ["id", 1]]
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 917ms (ActiveRecord: 4.9ms | Allocations: 3051)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:51:10 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_rails_default.html.erb (Duration: 3.0ms | Allocations: 384)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.4ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 2015)
+Completed 200 OK in 19ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 2811)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-03-27 17:52:12 +0530
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 727)
+  Rendered layouts/_rails_default.html.erb (Duration: 0.9ms | Allocations: 153)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 6.4ms | Allocations: 678)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 2452)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.7ms | Allocations: 2759)
+
+
+Started POST "/login" for 127.0.0.1 at 2024-03-27 17:52:46 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "session"=>{"email"=>"example@railstutorial.org", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "example@railstutorial.org"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mUser Update (5.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "remember_digest" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2024-03-27 12:22:46.946929"], ["remember_digest", "$2a$12$QIoyiCF.4D5ofx2fbOW6FOxXdKUeOy8LRAzY2lKXnHk59XFYV333e"], ["id", 1]]
+  ↳ app/models/user.rb:37:in `remember'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:37:in `remember'
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 903ms (ActiveRecord: 5.9ms | Allocations: 3048)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2024-03-27 17:52:46 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_rails_default.html.erb (Duration: 1.9ms | Allocations: 374)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/sessions_helper.rb:21:in `current_user'
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 695)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 2005)
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 2801)
+
+
