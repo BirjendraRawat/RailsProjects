@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   
   def new
+    # debugger
   end
 
   def create
@@ -9,8 +10,8 @@ class SessionsController < ApplicationController
       # if user&.authenticate(params[:session][:password])
       reset_session
       params[:session][:remember_me] == '1' ? remember(@user) : forget(@user)
-      log_in @user
-      redirect_to @user
+      # log_in @user
+      redirect_back_or user
       else
       flash.now[:danger] = 'Invalid email/password combination' 
       render 'new'
