@@ -78,13 +78,16 @@ p {
 	color: #fff;
 	text-transform: uppercase;
 	letter-spacing: -1px;
-	padding-top: 9px;
+	/*padding-top: 9px; */
 	font-weight: bold;
 	
 	&:hover {
 	color: #fff;
 	text-decoration: none;
 	}
+}
+.navbar{
+	margin-bottom: 0px !important;
 }
 
 
