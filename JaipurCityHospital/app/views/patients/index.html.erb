@@ -1,0 +1,10 @@
+<% provide(:title, 'All Patients') %>
+<h1>All patients</h1>
+<%#= will_paginate %>
+<ul class="patients">
+  <%# @patients.each do |patient| %>
+  <%#= render patient %>
+  <%= render @patients %>
+  <%# end %>
+</ul>
+<%#= will_paginate %>

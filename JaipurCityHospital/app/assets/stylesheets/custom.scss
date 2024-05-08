@@ -1,3 +1,18 @@
 /*. @import "bootstrap-sprockets";
 @import "bootstrap";  */
+$sidebar-width:  250px;
+$header-height: 70px;
 
+.main-content {
+    margin-top: -800px !important;
+    margin-left: $sidebar-width;
+    overflow: hidden;
+
+    .content {
+        padding: 0 15px 10px 15px;
+        margin-top: $header-height;
+    }
+}
+.footer {
+  margin-top: 800px !important;
+}
