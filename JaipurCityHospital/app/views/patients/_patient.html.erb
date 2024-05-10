@@ -1,5 +1,5 @@
 <li>
 
     <%= link_to patient.name, patient %>
-    | <%= link_to "delete", patient, method: :delete, data: { confirm: "You sure?" } %>
+    | <%= link_to patient.email, patient %> |<%= link_to "delete", patient, method: :delete, data: { confirm: "You sure?" } %>
   </li>

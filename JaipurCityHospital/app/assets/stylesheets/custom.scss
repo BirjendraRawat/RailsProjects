@@ -1,10 +1,11 @@
-/*. @import "bootstrap-sprockets";
-@import "bootstrap";  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 $sidebar-width:  250px;
 $header-height: 70px;
 
 .main-content {
-    margin-top: -800px !important;
+    margin-top: 0px !important;
     margin-left: $sidebar-width;
     overflow: hidden;
 

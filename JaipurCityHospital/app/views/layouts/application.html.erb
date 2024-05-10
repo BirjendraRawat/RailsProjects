@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag "application" %>
     <%= javascript_include_tag "jquery.min.js" %>
     <%= javascript_include_tag "popper.min.js" %>
     <%= javascript_include_tag "bootstrap.min.js" %>
@@ -15,7 +16,7 @@
   <body>
     <div id="layout-wrapper">
     <%= render 'layouts/header' %>
-    <%= render 'layouts/sidebar' %>
+    <%#= render 'layouts/sidebar' %>
     <div class="main-content">
       <div class="page-content">
         <div class="container-fluid">

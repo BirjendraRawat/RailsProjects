@@ -5,7 +5,7 @@ class PatientsController < ApplicationController
   # before_action :admin_patient, only: :destroy
 
   def index
-    @patients = Patient.all
+    @patients = Patient.paginate(page: params[:page])
   end
 
   def show
@@ -30,6 +30,16 @@ class PatientsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def edit
+    @patient = Patient.find(params[:id])
+  end
+
+  def destroy
+    Patient.find(params[:id]).destroy
+    flash[:success] = "Patient deleted"
+    redirect_to patients_url
   end
 
   private

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'welcome/contact_us'
   resources :doctors
   resources :patients
+  # put 'patient/:id/edit', to: 'patient#edit', as: 'patient_edit'
   get '/login', to: 'doctors#new'
   get '/signin', to: 'patients#new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
