@@ -16,7 +16,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Phone Number</th>
-            <th>Department</th>
+            <th>Assigned Patients</th>
             <th>Actions</th>
           </tr>
         </thead>
@@ -26,7 +26,12 @@
               <td><%= link_to doctor.name, doctor %></td>
               <td><%= doctor.email %></td>
               <td><%= doctor.name %></td>
-              <td><%= doctor.name %></td>
+              <td>
+                <% doctor.patients.each do |patient| %>
+                  <%= link_to patient.name, patient %>
+                  <br/>
+                <% end %>
+              </td>
               <td>
                 <%= link_to "Edit", edit_doctor_path(doctor) , class: 'btn btn-primary btn-sm' %>
                 <%= link_to "View", doctor_path(doctor) , class: 'btn btn-success btn-sm' %>

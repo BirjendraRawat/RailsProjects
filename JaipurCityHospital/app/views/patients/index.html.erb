@@ -26,7 +26,10 @@
               <td><%= link_to patient.name, patient %></td>
               <td><%= patient.email %></td>
               <td><%= patient.name %></td>
-              <td><%= patient.name %></td>
+              <td>
+                <% patient.doctors.each do |doctor| %>
+                  <%= link_to doctor.name, doctor %></td>
+                <% end %>
               <td>
                 <%#= edit_link(patient) %>
                 <%= link_to "Edit", edit_patient_path(patient) , class: 'btn btn-primary btn-sm' %>
