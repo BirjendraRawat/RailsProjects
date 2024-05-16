@@ -42,8 +42,18 @@ class PatientsController < ApplicationController
     redirect_to patients_url
   end
 
+  def update
+    @patient = Patient.find(params[:id])
+    if @patient.update(patient_params)
+      flash[:success] = "Profile updated"
+      redirect_to @patient
+    else
+      render 'edit'
+    end
+  end
+
   private
   def patient_params
-    params.require(:patient).permit(:name, :email, :password, :password_confirmation)
+    params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image)
   end
 end

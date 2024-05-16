@@ -5,6 +5,7 @@
       <h1>Patient's Info</h1>
       <h3>
         <%#= gravatar_for @user %>
+        <%= image_tag @patient.image %>
         <%= @patient.name %>
       </h3>
     </section>

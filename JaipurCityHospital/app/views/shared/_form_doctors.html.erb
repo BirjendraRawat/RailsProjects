@@ -14,5 +14,10 @@
     <%= f.label :password_confirmation, "Confirmation" %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+    <div class="form-group">
+    <%= f.label :image, class: 'mb-2' %> <br>
+    <%= f.file_field :image %>
+  </div>
+
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>

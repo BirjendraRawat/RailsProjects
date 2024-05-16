@@ -1,6 +1,7 @@
 class Doctor < ApplicationRecord
   has_many :patients
   has_and_belongs_to_many :patients
+  has_one_attached :image
 
   attr_accessor :remember_token , :activation_token
 

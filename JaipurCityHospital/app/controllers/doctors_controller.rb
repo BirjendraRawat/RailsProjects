@@ -35,6 +35,16 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.find(params[:id])
   end
 
+  def update
+    @doctor = Doctor.find(params[:id])
+    if @doctor.update(doctor_params)
+      flash[:success] = "Profile updated"
+      redirect_to @doctor
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     Doctor.find(params[:id]).destroy
     flash[:success] = "Doctor deleted"
@@ -43,6 +53,6 @@ class DoctorsController < ApplicationController
 
   private
   def doctor_params
-    params.require(:doctor).permit(:name, :email, :password, :password_confirmation)
+    params.require(:doctor).permit(:name, :email, :password, :password_confirmation, :image)
   end
 end
