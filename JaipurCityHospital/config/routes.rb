@@ -10,9 +10,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#home'
   get 'welcome/index'
-  get 'welcome/about'
-  get 'welcome/help'
-  get 'welcome/contact_us'
+  get '/about', to: 'welcome#about'
+  get '/help', to: 'welcome#help'
+  get '/contact', to: 'welcome#contact_us'
   resources :doctors
   resources :patients
   # put 'patient/:id/edit', to: 'patient#edit', as: 'patient_edit'

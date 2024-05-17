@@ -25,7 +25,8 @@ end
 Patient.create!(name: "Example Patient",
              email: "example@railstutorial.org",
              password: "foobar",
-             password_confirmation: "foobar")
+             password_confirmation: "foobar",
+             admin: true)
 
 # Generate a bunch of additional users.
 99.times do |n|

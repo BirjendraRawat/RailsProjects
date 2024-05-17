@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
 
-  # before_action :logged_in_patient, only: [:index, :edit, :update, :destroy]
+  before_action  only: [:index, :edit, :update, :destroy]
   # before_action :correct_patient, only: [:edit, :update]
   # before_action :admin_patient, only: :destroy
 
@@ -55,5 +55,19 @@ class PatientsController < ApplicationController
   private
   def patient_params
     params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image)
+  end
+
+  # Confirms a logged-in user
+  def logged_in_patient
+    # unless logged_in?
+    #   store_location
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
+  # end
+
+  # Confirms an admin user.
+  def admin_patient
+    redirect_to(root_url) #unless current_patient.admin?
   end
 end

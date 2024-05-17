@@ -1,6 +1,13 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+#layout-wrapper{
+  background-image: url('../assets/images/hallway.jpg');
+  background-size: cover;
+  /*background-color: red;*/
+  z-index: 12;
+}
 $sidebar-width:  250px;
 $header-height: 70px;
 
