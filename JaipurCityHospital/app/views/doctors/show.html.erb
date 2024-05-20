@@ -6,10 +6,14 @@
     <section class="doctor_info">
       <h1> Doctor's Info </h1>
       <h3>
+        <% if @doctor.image.present? %>
         <%= image_tag @doctor.image %>
-        <%#= gravatar_for @user %>
         <%= @doctor.name %>
-        <%= @doctor.email %>
+        <% else %>
+        <%= @doctor.name %>
+        <% end %>
+        <%#= gravatar_for @user %>
+        <%#= @doctor.email %>
       </h3>
     </section>
   </aside>

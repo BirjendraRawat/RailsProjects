@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'welcome#contact_us'
   resources :doctors
   resources :patients
+  resources :users
   # put 'patient/:id/edit', to: 'patient#edit', as: 'patient_edit'
   get '/login', to: 'doctors#new'
   get '/signin', to: 'patients#new'

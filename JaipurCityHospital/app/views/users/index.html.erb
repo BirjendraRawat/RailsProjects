@@ -1,0 +1,89 @@
+<h1>All patients</h1>
+
+<ul class="patients">
+  <%# @patients.each do |patient| %>
+  <%#= render patient %>
+  <%#= render @patients %>
+  <%# end %>
+</ul>
+<%= will_paginate %>
+
+<div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Doctor Assigned</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @patients.each do |patient| %>
+            <tr>
+              <td><%= link_to patient.name, patient %></td>
+              <td><%= patient.email %></td>
+              <td><%= patient.name %></td>
+              <td>
+                <% patient.doctors.each do |doctor| %>
+                  <%= link_to doctor.name, doctor %></td>
+                <% end %>
+              <td>
+                <%#= edit_link(patient) %>
+                <%= link_to "Edit", edit_patient_path(patient) , class: 'btn btn-primary btn-sm' %>
+                <%= link_to "View", patient_path(patient) , class: 'btn btn-success btn-sm' %>
+                <%= link_to "Delete", patient_path(patient), title: 'Delete', class: 'fa fa-trash-alt btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure you want to delete this patient #{patient.name}?" } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%#= will_paginate %>
+
+
+    <h1>All doctors</h1>
+
+<ul class="doctors">
+  <%# @doctors.each do |doctor| %>
+  <%#= render doctor %>
+  <%#= render @doctors %>
+  <%# end %>
+</ul>
+<%#= will_paginate %>
+
+<div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Assigned Patients</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @doctors.each do |doctor| %>
+            <tr>
+              <td><%= link_to doctor.name, doctor %></td>
+              <td><%= doctor.email %></td>
+              <td><%= doctor.name %></td>
+              <td>
+                <% doctor.patients.each do |patient| %>
+                  <%= link_to patient.name, patient %>
+                  <br/>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to "Edit", edit_doctor_path(doctor) , class: 'btn btn-primary btn-sm' %>
+                <%= link_to "View", doctor_path(doctor) , class: 'btn btn-success btn-sm' %>
+                <%= link_to "Delete", doctor_path(doctor), title: 'Delete', class: 'fa fa-trash-alt btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure you want to delete this doctor #{doctor.name}?" } %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <%= will_paginate %>

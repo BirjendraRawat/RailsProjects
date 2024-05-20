@@ -5,9 +5,13 @@
       <h1>Patient's Info</h1>
       <h3>
         <%#= gravatar_for @user %>
+        <% if @patient.image.present? %>
         <%= image_tag @patient.image %>
         <%= @patient.name %>
-      </h3>
+        <% else %>
+        <%= @patient.name %>
+        <% end %>
+        </h3>
     </section>
   </aside>
 </div>
