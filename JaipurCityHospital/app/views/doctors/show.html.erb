@@ -68,13 +68,14 @@
               </div>
               <div class="mt-4">
                 <div class="col">
-                  <%#= f.label :badge, "Badge:" %>
+
                 </div>
                 <div class="col">
                   <%#= f.select :badge, options_for_select(User::BADGE, @user.badge), { prompt: "-- Select Badge --" }, class: "form-control", style: "margin-bottom: 20px;" %>
                 </div>
                 <div class="col">
-                  <h6>Hidden From List: <%#= f.check_box :hidden %></h6>
+                  <p class="mb-1">Department</p>
+                  <h5><%= @doctor.department %></h5>
                 </div>
               </div>
               <%#= f.submit "Update", class: "btn btn-primary" %>

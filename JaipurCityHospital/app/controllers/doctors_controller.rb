@@ -53,6 +53,7 @@ class DoctorsController < ApplicationController
 
   private
   def doctor_params
-    params.require(:doctor).permit(:name, :email, :password, :password_confirmation, :image)
+    params.require(:doctor).permit(:name, :email, :password, :password_confirmation, :image, :department)
+    # debugger
   end
 end

@@ -34,17 +34,26 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    if @user.admin?
     Doctor.find(params[:id]).destroy
     flash[:success] = "Doctor deleted"
     redirect_to doctors_url
+  else
+    flash[:danger] = "can not delete doctor"
+  end
 
+    if @user.admin?
     Patient.find(params[:id]).destroy
     flash[:success] = "Patient deleted"
     redirect_to patients_url
+  else
+    flash[:danger] = "can not delete patient"
+  end
 
   end
 
   def admin_user
+    # debugger
     redirect_to(root_url) unless current_user.admin?
   end
 

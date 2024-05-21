@@ -1,23 +1,25 @@
 
     <%= form_with(model: @doctor, local: true) do |f| %>
-    <%= render 'shared/error_messages_doctors', object: @doctor %>
+      <%= render 'shared/error_messages_doctors', object: @doctor %>
     
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
 
-    <%= f.label :email %>
-    <%= f.email_field :email, class: 'form-control' %>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
 
-    <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %>
 
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %><br/>
 
-    <div class="form-group">
-    <%= f.label :image, class: 'mb-2' %> <br>
-    <%= f.file_field :image %>
-  </div>
+      <%= f.select :department, options_for_select(User::DEPARTMENTS, params[:department]), class: 'form-select ', prompt: 'Select Departments', onchange: 'this.form.submit();' %>
 
-    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+      <div class="form-group">
+        <%= f.label :image, class: 'mb-2' %> <br>
+        <%= f.file_field :image %>
+      </div>
+
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>

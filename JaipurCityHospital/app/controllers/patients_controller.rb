@@ -2,7 +2,7 @@ class PatientsController < ApplicationController
 
   before_action  only: [:index, :edit, :update, :destroy]
   # before_action :correct_patient, only: [:edit, :update]
-  before_action :admin_patient, only: :destroy
+  before_action  only: :destroy
 
   def index
     @patients = Patient.paginate(page: params[:page])
@@ -74,7 +74,8 @@ class PatientsController < ApplicationController
   # end
 
   # Confirms an admin user.
-  def admin_patient
-    redirect_to(root_url) unless @patient.admin?
-  end
+  # def admin_patient
+  #   # debugger
+  #   redirect_to(root_url) unless @patient.admin?
+  # end
 end

@@ -34,7 +34,11 @@
                 <%#= edit_link(patient) %>
                 <%= link_to "Edit", edit_patient_path(patient) , class: 'btn btn-primary btn-sm' %>
                 <%= link_to "View", patient_path(patient) , class: 'btn btn-success btn-sm' %>
+                <% if current_user.admin? %>
                 <%= link_to "Delete", patient_path(patient), title: 'Delete', class: 'fa fa-trash-alt btn btn-danger btn-sm', method: :delete, data: { confirm: "Are you sure you want to delete this patient #{patient.name}?" } %>
+                <% else %>
+                <%#= link_to "Can't Delete", patient_path(patient), title: "Can't Delete", class: 'fa fa-trash-alt btn btn-danger btn-sm' %>
+                <% end %>
               </td>
             </tr>
           <% end %>
