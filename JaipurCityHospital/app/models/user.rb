@@ -30,30 +30,30 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   def General_Phycians?
-    role == GENERAL_PHYSICIANS
+    department == GENERAL_PHYSICIANS
   end
 
   def Orthopeadics?
-    role == ORTHOPEADICS
+    department == ORTHOPEADICS
   end
 
   def Gynae?
-    role == GYNAE
+    department == GYNAE
   end
 
   def Pedatric?
-    role == PEDATRIC
+    department == PEDATRIC
   end
 
   def Neurology?
-    role == NEUROLOGY
+    department == NEUROLOGY
   end
 
   def Dermatology?
-    role == DERMATOLOGY
+    department == DERMATOLOGY
   end
 
   def Dentistry?
-    role == DENTISTRY
+    department == DENTISTRY
   end
 end
