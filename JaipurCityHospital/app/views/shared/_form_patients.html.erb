@@ -14,6 +14,10 @@
     <%= f.label :password_confirmation, "Confirmation" %>
     <%= f.password_field :password_confirmation, class: 'form-control' %>
 
+    <%= f.select :department, options_for_select(User::DEPARTMENTS, params[:department]), class: 'form-select ', prompt: 'Select Departments', onchange1: 'this.form.submit();' %>
+
+    <%#= f.select :doctor, options_for_select(@doctors_for_dropdown), class: 'form-select ', prompt: 'Select Doctor', onchange: 'this.form.submit();' %>
+
     <div class="form-group">
     <%= f.label :image, class: 'mb-2' %> <br>
     <%= f.file_field :image %>
@@ -23,3 +27,33 @@
 
     <%#= render "shared/image_input", f: f, input: :image, url: f.object.url, label: "Upload Photo" %>
     <% end %>
+    <!--script type="text/javascript">
+      $(document).ready(function(){
+ $('select#doctor').chainedTo('select#department');
+});
+
+<%#= select("room", "name", options_for_select(@rooms_for_dropdown), {:prompt => 'Select Room'}) %>
+
+<%#= select("device", "name", options_for_select(@devices_for_dropdown), {:prompt => 'Select Device'}) %>
+
+
+@rooms = Room.all
+@rooms_for_dropdown = []
+@rooms.each do |i|
+  @rooms_for_dropdown = @rooms_for_dropdown << [i.name,i.id]
+end
+
+@devices = Device.all
+@devices_for_dropdown = []
+@devices.each do |i|
+  @devices_for_dropdown = @devices_for_dropdown << [i.name,i.id,{:class => i.room.id}]
+end
+
+$(document).ready(function(){
+ $('select#device_name').chainedTo('select#room_name');
+});
+
+<%#= f.select :department, options_for_select(User::DEPARTMENTS, params[:department]), class: 'form-select ', prompt: 'Select Departments', onchange1: 'this.form.submit();' %>
+
+    <%#= f.select :doctor, options_for_select(Doctor.find_by(department: "onchange1"), params[:doctor]), class: 'form-select ', prompt: 'Select Doctor', onchange: 'this.form.submit();' %>
+    </script-->

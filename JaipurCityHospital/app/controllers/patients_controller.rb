@@ -4,6 +4,12 @@ class PatientsController < ApplicationController
   # before_action :correct_patient, only: [:edit, :update]
   before_action  only: :destroy
 
+#   @doctors = Doctor.all
+#   @doctors_for_dropdown = []
+#   @doctors.each do |i|
+#   @doctors_for_dropdown = @doctors_for_dropdown << [i.department]
+# end
+
   def index
     @patients = Patient.paginate(page: params[:page])
   end
@@ -54,7 +60,7 @@ class PatientsController < ApplicationController
 
   private
   def patient_params
-    params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image)
+    params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image, :department, :doctor)
   end
 
   # Confirms a logged-in user

@@ -29,10 +29,10 @@
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link "><%= link_to "Doctors", doctors_path %>||</a>
+          <a class="nav-link " href="/doctors"><%#= link_to "Doctors", doctors_path %>Doctors</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><%= link_to "Patients", patients_path %></a>
+          <a class="nav-link" href="/patients"><%#= link_to "Patients", patients_path %>Patients</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Career</a>
@@ -46,9 +46,16 @@
 
 <button class="btn btn-outline-primary" type="submit">Lab Report</button>
 
-      </ul>
-       <%= link_to "Doctor's login", login_path %>| |
-       <%= link_to " Patient's login", signin_path %>
+
+      <li class="nav-item">
+          <a class="nav-link " href="/login"><%#= link_to "Doctors", doctors_path %>Doctor's Login</a>
+        </li>
+       <%#= link_to "Doctor's login", login_path %>
+       <li class="nav-item">
+          <a class="nav-link " href="/signin"><%#= link_to "Doctors", doctors_path %>Patient's Signin</a>
+        </li>
+       <%#= link_to " Patient's login", signin_path %>
+       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 
