@@ -10,6 +10,18 @@ class PatientsController < ApplicationController
 #   @doctors_for_dropdown = @doctors_for_dropdown << [i.department]
 # end
 
+# @department = User::DEPARTMENTS
+# @department_for_dropdown = []
+# @department.each do |key, value|
+#   @department_for_dropdown = @department_for_dropdown << [value]
+# end
+
+# @doctors = Doctor.all
+# @doctors_for_dropdown = []
+# @doctors.each do |i|
+#   @doctors_for_dropdown = @doctors_for_dropdown << [i.name,i.id,{:class => i.department.value}]
+# end
+
   def index
     @patients = Patient.paginate(page: params[:page])
   end
@@ -60,7 +72,7 @@ class PatientsController < ApplicationController
 
   private
   def patient_params
-    params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image, :department, :doctor)
+    params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image)
   end
 
   # Confirms a logged-in user

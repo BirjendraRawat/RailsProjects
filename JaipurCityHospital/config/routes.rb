@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :patients
   resources :users
   # put 'patient/:id/edit', to: 'patient#edit', as: 'patient_edit'
-  get '/login', to: 'doctors#new'
-  get '/signin', to: 'patients#new'
+  # get '/doctor_add', to: 'doctors#new'
+  # get '/patient_add', to: 'patients#new'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
