@@ -1,8 +1,8 @@
 class PatientsController < ApplicationController
 
-  before_action  only: [:index, :edit, :update, :destroy]
+  # before_action  only: [:index, :edit, :update, :destroy]
   # before_action :correct_patient, only: [:edit, :update]
-  before_action  only: :destroy
+  before_action  :admin_user, only: [:create ,:new, :edit, :update, :destroy]
 
 #   @doctors = Doctor.all
 #   @doctors_for_dropdown = []
@@ -38,20 +38,31 @@ class PatientsController < ApplicationController
   end
 
   def create
+    # debugger
+    @doctor = Doctor.find_by(id: params[:patient][:doctor_id])
+
+
     @patient = Patient.new(patient_params)
-    if @patient.save
-      # @patient.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
-      # log_in @patient
-      # flash[:success] = "Welcome to Sample App!"
-      redirect_to @patient
+    if current_user.admin?
+      if @patient.save
+        @patient.doctors << @doctor
+        # @patient.send_activation_email
+        flash[:info] = "Please check your email to activate your account."
+        # log_in @patient
+        # flash[:success] = "Welcome to Sample App!"
+        redirect_to @patient
+      else
+        render 'new'
+      end
     else
-      render 'new'
+      redirect_to root_url, alert: "You can't add Patients as you are not Admin."
     end
   end
 
   def edit
+
     @patient = Patient.find(params[:id])
+
   end
 
   def destroy
@@ -70,9 +81,15 @@ class PatientsController < ApplicationController
     end
   end
 
+  # Confirms an admin user.
+  def admin_user
+    # debugger
+    redirect_to(root_url) unless current_user.admin?
+  end
+
   private
   def patient_params
-    params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image)
+    params.require(:patient).permit(:name, :email, :phone, :password, :password_confirmation, :image, :department, :doctor_id)
   end
 
   # Confirms a logged-in user
@@ -91,9 +108,5 @@ class PatientsController < ApplicationController
   #   patient && patient == current_patient
   # end
 
-  # Confirms an admin user.
-  # def admin_patient
-  #   # debugger
-  #   redirect_to(root_url) unless @patient.admin?
-  # end
+
 end

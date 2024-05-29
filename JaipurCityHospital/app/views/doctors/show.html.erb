@@ -77,6 +77,14 @@
                   <p class="mb-1">Department</p>
                   <h5><%= @doctor.department %></h5>
                 </div>
+                <div class="col">
+                  <h6>Patients Assigned: </h6>
+                <h5 class="font-size-16">
+                      <% @doctor.patients.each do |patient| %>
+                      <%= link_to patient.name, patient %>
+                      <% end %>
+                  </h5>
+                </div>
               </div>
               <%#= f.submit "Update", class: "btn btn-primary" %>
               <%# end %>

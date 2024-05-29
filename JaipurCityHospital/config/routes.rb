@@ -9,10 +9,12 @@ Rails.application.routes.draw do
   get 'patients/new'
   devise_for :users
   root 'welcome#home'
+  # root 'users/sign_in'
   get 'welcome/index'
   get '/about', to: 'welcome#about'
   get '/help', to: 'welcome#help'
   get '/contact', to: 'welcome#contact_us'
+  delete '/logout', to: 'users#destroy'
   resources :doctors
   resources :patients
   resources :users

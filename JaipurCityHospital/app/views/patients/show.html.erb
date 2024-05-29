@@ -69,7 +69,12 @@
                   <%#= f.select :badge, options_for_select(User::BADGE, @user.badge), { prompt: "-- Select Badge --" }, class: "form-control", style: "margin-bottom: 20px;" %>
                 </div>
                 <div class="col">
-                  <h6>Hidden From List: <%#= f.check_box :hidden %></h6>
+                  <h6>Doctor Assigned: <%#= f.check_box :hidden %></h6>
+                  <h5 class="font-size-16">
+                      <% @patient.doctors.each do |doctor| %>
+                      <%= link_to doctor.name, doctor %>
+                      <% end %>
+                  </h5>
                 </div>
               </div>
               <%#= f.submit "Update", class: "btn btn-primary" %>

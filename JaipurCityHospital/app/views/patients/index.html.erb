@@ -7,6 +7,10 @@
   <%#= render @patients %>
   <%# end %>
 </ul>
+<% if current_user.admin? %>
+<a class="add-patient btn btn-primary" href="/patients/new"><%#= link_to "Doctors", doctors_path %>Add Patient</a>
+<% else %>
+        <% end %>
 <%= will_paginate %>
 
 <div class="table-responsive">
@@ -25,11 +29,12 @@
             <tr>
               <td><%= link_to patient.name, patient %></td>
               <td><%= patient.email %></td>
-              <td><%= patient.name %></td>
+              <td><%= patient.phone %></td>
               <td>
                 <% patient.doctors.each do |doctor| %>
-                  <%= link_to doctor.name, doctor %></td>
+                  <%= link_to doctor.name, doctor %></br>
                 <% end %>
+                </td>
               <td>
                 <%#= edit_link(patient) %>
                 <%= link_to "Edit", edit_patient_path(patient) , class: 'btn btn-primary btn-sm' %>

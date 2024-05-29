@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   before_action  only: [:index, :edit, :update, :destroy]
-  before_action :admin_user, only: :destroy
+  before_action :admin_user, only: [:index, :edit, :update, :destroy]
 
   def index
     @users = User.paginate(page: params[:page])
@@ -33,29 +33,53 @@ class UsersController < ApplicationController
 
   end
 
-  def destroy
-    if @user.admin?
-    Doctor.find(params[:id]).destroy
-    flash[:success] = "Doctor deleted"
-    redirect_to doctors_url
-  else
-    flash[:danger] = "can not delete doctor"
-  end
+  # def destroy
+  #   if current_user.admin?
+  #   Doctor.find(params[:id]).destroy
+  #   flash[:success] = "Doctor deleted"
+  #   redirect_to doctors_url
+  # else
+  #   flash[:danger] = "can not delete doctor"
+  # end
 
-    if @user.admin?
-    Patient.find(params[:id]).destroy
-    flash[:success] = "Patient deleted"
-    redirect_to patients_url
-  else
-    flash[:danger] = "can not delete patient"
-  end
+  #   if current_user.admin?
+  #   Patient.find(params[:id]).destroy
+  #   flash[:success] = "Patient deleted"
+  #   redirect_to patients_url
+  # else
+  #   flash[:danger] = "can not delete patient"
+  # end
 
-  end
+    # log_out
+    # redirect_to root_url
+
+    # User.find(params[:id]).destroy
+    # flash[:success] = "User deleted"
+    # redirect_to users_url
+
+    # log_out if logged_in?
+    # redirect_to root_url
+
+  # end
+
+  # def log_out
+  #   # forget(current_user)
+  #   @current_user.delete
+  #   @current_user = nil
+  # end
+
+  # def logged_in?
+  #   !current_user.nil?
+  # end
+
+
 
   def admin_user
     # debugger
     redirect_to(root_url) unless current_user.admin?
   end
+
+
 
   private
   def doctor_params
@@ -65,5 +89,12 @@ class UsersController < ApplicationController
   def patient_params
     params.require(:patient).permit(:name, :email, :password, :password_confirmation, :image)
   end
+
+  private
+  def user_params
+    params.require(:user).permit(:email, :password, :password_confirmation)
+  end
+
+
 
 end

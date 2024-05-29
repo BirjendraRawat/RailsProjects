@@ -14,7 +14,28 @@
         <li class="nav-item">
           <a class="nav-link" href="/about">About Us</a>
         </li>
-        <li class="nav-item dropdown">
+
+        <li class="nav-item">
+          <a class="nav-link " href="/doctors"><%#= link_to "Doctors", doctors_path %>Doctors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/patients"><%#= link_to "Patients", patients_path %>Patients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/help">Services</a>
+        </li>
+        <!--li class="nav-item">
+          <a class="nav-link" href="#">Financial Support</a>
+        </li-->
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+
+
+
+
+       <%#= link_to " Patient's login", signin_path %>
+       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Departments
           </a>
@@ -28,39 +49,37 @@
             <li><a class="dropdown-item" href="#">Dentistry</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " href="/doctors"><%#= link_to "Doctors", doctors_path %>Doctors</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/patients"><%#= link_to "Patients", patients_path %>Patients</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/help">Career</a>
-        </li>
-        <!--li class="nav-item">
-          <a class="nav-link" href="#">Financial Support</a>
-        </li-->
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact Us</a>
-        </li>
 
-<button class="btn btn-outline-primary" type="submit">Lab Report</button>
-
-
-      <li class="nav-item">
-          <a class="nav-link " href="/doctors/new"><%#= link_to "Doctors", doctors_path %>Add Doctors</a>
+        <button class="btn btn-outline-primary" type="submit">Lab Report</button>
+        <li class="nav-item">
+          <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <!--a class="nav-link " href="/users/sign_out">Logout</a-->
+      </li>
+        <% else %>
+        <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %>||
+          <!--a class="nav-link " href="/users/sign_up">Sign up</a-->
         </li>
-       <%#= link_to "Doctor's login", login_path %>
-       <li class="nav-item">
-          <a class="nav-link " href="/patients/new"><%#= link_to "Doctors", doctors_path %>Add Patient</a>
-        </li>
-       <%#= link_to " Patient's login", signin_path %>
+        <li class="nav-item">
+          <%= link_to "Sign in", new_user_session_path, :class => 'navbar-link' %>
+          <!--a class="nav-link " href=" /users/sign_in">Sign in</a-->
+            <% end %>
+      </li>
+      <%# if user_signed_in? %>
+      <%#= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+      <%# else %>
+    <%#= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %>
+    <%#= link_to "Sign in", new_user_session_path, :class => 'navbar-link' %>
+    <%# end %>
        </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
+
+
     </div>
   </div>
 </nav>
