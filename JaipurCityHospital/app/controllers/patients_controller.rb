@@ -72,8 +72,11 @@ class PatientsController < ApplicationController
   end
 
   def update
+    # debugger
+    @doctor = Doctor.find_by(id: params[:patient][:doctor_id])
     @patient = Patient.find(params[:id])
     if @patient.update(patient_params)
+      @patient.doctors << @doctor
       flash[:success] = "Profile updated"
       redirect_to @patient
     else
