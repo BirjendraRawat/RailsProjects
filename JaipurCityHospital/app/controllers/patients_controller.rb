@@ -73,14 +73,19 @@ class PatientsController < ApplicationController
 
   def update
     # debugger
-    @doctor = Doctor.find_by(id: params[:patient][:doctor_id])
+    # @doctor = Doctor.find_by(id: params[:patient][:doctor_id])
     @patient = Patient.find(params[:id])
-    if @patient.update(patient_params)
-      @patient.doctors << @doctor
-      flash[:success] = "Profile updated"
-      redirect_to @patient
+    if current_user.admin?
+      if @patient.update(patient_params)
+        @doctor = Doctor.find_by(id: params[:patient][:doctor_id])
+          @patient.doctors << @doctor
+          flash[:success] = "Profile updated"
+          redirect_to @patient
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      redirect_to root_url, alert: "You can't edit Patients as you are not Admin."
     end
   end
 

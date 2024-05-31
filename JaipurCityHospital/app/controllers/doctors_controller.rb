@@ -41,11 +41,15 @@ class DoctorsController < ApplicationController
 
   def update
     @doctor = Doctor.find(params[:id])
-    if @doctor.update(doctor_params)
-      flash[:success] = "Profile updated"
-      redirect_to @doctor
+    if current_user.admin?
+      if @doctor.update(doctor_params)
+        flash[:success] = "Profile updated"
+        redirect_to @doctor
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      redirect_to root_url, alert: "You can't add Patients as you are not Admin."
     end
   end
 

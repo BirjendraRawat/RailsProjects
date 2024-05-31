@@ -73,13 +73,28 @@
     <%#= link_to "Sign in", new_user_session_path, :class => 'navbar-link' %>
     <%# end %>
        </ul>
-      <form class="d-flex" role="search">
+      <!--form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 
         <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form-->
+      <div>
+        <form class="d-flex" >
+        <input class="form-control me-2"  placeholder="I can speak" aria-label="Search" id ="input">
+        <button class="btn btn-outline-success" onclick="speak()">Speak</button>
+      </div>
+    </form>
 
 
     </div>
   </div>
 </nav>
+
+
+<script>
+  function speak(){
+    var text = document.getElementById("input").value;
+    var utterance = new SpeechSynthesisUtterance(text);
+    speechSynthesis.speak(utterance);
+  }
+</script>
